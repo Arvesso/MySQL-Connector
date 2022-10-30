@@ -184,7 +184,10 @@ namespace SQLconnector
             dataBase.OpenConnection();
 
             if (command.ExecuteNonQuery() == 1)
+            {
                 MessageBox.Show("Успешная регистрация", "Registration");
+                Hide();
+            }
             else
                 MessageBox.Show("Ошибка регистрации", "Registration");
 

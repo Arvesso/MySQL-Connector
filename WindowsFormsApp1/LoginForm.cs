@@ -54,9 +54,14 @@ namespace SQLconnector
             adapter.Fill(table);
 
             if (table.Rows.Count == 1)
-                MessageBox.Show("Connected");
+            {
+                MessageBox.Show("Успешное подключение", "Autorization");
+                var mainForm = new MainForm();
+                mainForm.Show();
+                Hide();
+            }
             else
-                MessageBox.Show("Incorrect data", "Autorization");
+                MessageBox.Show("Неверные данные входа", "Autorization");
         }
 
         private void loginField_Enter(object sender, EventArgs e)
@@ -112,6 +117,22 @@ namespace SQLconnector
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             buttonLogin.Focus();
+        }
+
+        private void gotoRegister_MouseEnter(object sender, EventArgs e)
+        {
+            gotoRegister.ForeColor = Color.Gray;
+        }
+
+        private void gotoRegister_MouseLeave(object sender, EventArgs e)
+        {
+            gotoRegister.ForeColor = Color.White;
+        }
+
+        private void gotoRegister_Click(object sender, EventArgs e)
+        {
+            var registerForm = new RegisterForm();
+            registerForm.Show();
         }
     }
 }

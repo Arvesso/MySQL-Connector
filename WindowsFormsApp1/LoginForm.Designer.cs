@@ -37,6 +37,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.gotoRegister = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -46,6 +47,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(41)))), ((int)(((byte)(53)))));
+            this.panel1.Controls.Add(this.gotoRegister);
             this.panel1.Controls.Add(this.passwordField);
             this.panel1.Controls.Add(this.buttonLogin);
             this.panel1.Controls.Add(this.loginField);
@@ -145,6 +147,22 @@
             this.label1.Text = "Авторизация";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // gotoRegister
+            // 
+            this.gotoRegister.AutoSize = true;
+            this.gotoRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gotoRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gotoRegister.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gotoRegister.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.gotoRegister.Location = new System.Drawing.Point(254, 303);
+            this.gotoRegister.Name = "gotoRegister";
+            this.gotoRegister.Size = new System.Drawing.Size(121, 26);
+            this.gotoRegister.TabIndex = 7;
+            this.gotoRegister.Text = "Регистрация";
+            this.gotoRegister.Click += new System.EventHandler(this.gotoRegister_Click);
+            this.gotoRegister.MouseEnter += new System.EventHandler(this.gotoRegister_MouseEnter);
+            this.gotoRegister.MouseLeave += new System.EventHandler(this.gotoRegister_MouseLeave);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,5 +195,6 @@
         private System.Windows.Forms.TextBox loginField;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.TextBox passwordField;
+        private System.Windows.Forms.Label gotoRegister;
     }
 }
